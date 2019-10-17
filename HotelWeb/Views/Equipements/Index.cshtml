@@ -1,0 +1,51 @@
+﻿@model IEnumerable<DataHotel.Entite.Equipement>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.debit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.consommation)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.debit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.consommation)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EquipementId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EquipementId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EquipementId })
+        </td>
+    </tr>
+}
+
+</table>

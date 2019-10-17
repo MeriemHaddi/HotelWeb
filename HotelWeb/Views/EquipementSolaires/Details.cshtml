@@ -1,0 +1,58 @@
+﻿@model DataHotel.Entite.EquipementSolaire
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EquipementSolaire</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.debit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.debit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.consommation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.consommation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.coeff)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.coeff)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EquipementId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
